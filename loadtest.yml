@@ -1,5 +1,5 @@
 config:
-  target: "http://127.0.0.1:7070/"
+  target: "http://127.0.0.1:80"
 
   phases:
     - duration: 10
