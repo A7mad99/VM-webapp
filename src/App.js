@@ -14,7 +14,7 @@ class App extends React.Component {
     event.preventDefault();
     const { name, country } = this.state;
     axios
-      .post("http://localhost:7070/submit", { name, country })
+      .post("http://127.0.0.1:7070/submit", { name, country })
       .then((response) => {
         console.log(response);
       })
