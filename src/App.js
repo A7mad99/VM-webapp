@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +12,15 @@ class App extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
+    const { name, country } = this.state;
+    axios
+      .post("http://192.168.56.101/submit", { name, country })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   handleChange = (event) => {

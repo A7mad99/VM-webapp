@@ -1,8 +1,9 @@
 config:
-  target: "http://localhost:3000/"
+  target: "http://192.168.56.101"
+
   phases:
-    - duration: 60
-      arrivalRate: 10
+    - duration: 10
+      arrivalRate: 1
 scenarios:
   - name: "Test My React App"
     flow:
@@ -11,3 +12,5 @@ scenarios:
           json:
             name: "John Doe"
             country: "USA"
+      - get:
+          url: "/"
