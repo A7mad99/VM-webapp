@@ -1,9 +1,9 @@
 config:
-  target: "http://127.0.0.1/"
+  target: "http://127.0.0.1"
 
   phases:
     - duration: 10
-      arrivalRate: 1
+      arrivalRate: 5
 scenarios:
   - name: "Test My React App"
     flow:
