@@ -2,15 +2,10 @@ config:
   target: "http://127.0.0.1"
 
   phases:
-    - duration: 10
-      arrivalRate: 5
+    - duration: 300
+      arrivalRate: 10
 scenarios:
   - name: "Test My React App"
     flow:
-      - post:
-          url: "/submit"
-          json:
-            name: "John Doe"
-            country: "USA"
       - get:
           url: "/"
